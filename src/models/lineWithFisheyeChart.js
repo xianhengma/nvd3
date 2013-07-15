@@ -1,5 +1,5 @@
 
-nv.models.lineChart = function() {
+nv.models.lineWithFisheyeChart = function() {
   var margin = {top: 30, right: 20, bottom: 50, left: 60},
       color = nv.utils.defaultColor(),
       width = null, 
@@ -19,7 +19,7 @@ nv.models.lineChart = function() {
 
   var x = d3.fisheye.scale(d3.scale.linear).distortion(0);
 
-  var lines = nv.models.line().xScale(x),
+  var lines = nv.models.lineWithFisheye().xScale(x),
       //x = lines.xScale(),
       y = lines.yScale(),
       xAxis = nv.models.axis().scale(x).orient('bottom').tickPadding(5),
